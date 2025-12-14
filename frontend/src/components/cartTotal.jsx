@@ -44,7 +44,7 @@ const CartTotal = () => {
         </div>
       </div>
       <Link
-        to="/login"
+        to="/placeorder"
         className="block w-full bg-black text-white text-center py-3 px-6 hover:bg-gray-800 transition-colors rounded"
       >
         PROCEED TO CHECKOUT

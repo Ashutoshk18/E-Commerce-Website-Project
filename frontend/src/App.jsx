@@ -29,6 +29,7 @@ export default function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/product/:productId" element={<Product />} />
         <Route path="/cart" element={<Cart />} />
+        <Route path="/placeorder" element={<PlaceOrder />} />
         <Route path="/login" element={<Login />} />
         <Route path="/orders" element={<Orders />} />
       </Routes>
