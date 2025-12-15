@@ -9,6 +9,7 @@ A fully functional, modern e-commerce platform built with React and Vite. This p
 ## ✨ Features
 
 ### 🏠 Core Features
+
 - **Product Catalog**: Browse through a wide range of products with detailed views
 - **Product Details**: View product images, descriptions, sizes, and pricing
 - **Shopping Cart**: Add, remove, and manage items with quantity controls
@@ -16,6 +17,7 @@ A fully functional, modern e-commerce platform built with React and Vite. This p
 - **Responsive Design**: Fully responsive UI that works seamlessly on all devices
 
 ### 🛒 Shopping Cart Features
+
 - Add products to cart with size selection
 - Increment/decrement item quantities
 - Remove items with confirmation dialog
@@ -23,11 +25,13 @@ A fully functional, modern e-commerce platform built with React and Vite. This p
 - Cart count badge in navigation
 
 ### 💳 Payment Options
+
 - **Cash on Delivery**: Pay when your order arrives (no payment details required)
 - **UPI Payment**: Quick payment using UPI ID
 - **Credit/Debit Cards**: Secure card payment with validation
 
 ### 🎨 User Interface
+
 - Modern and clean design
 - Smooth animations and transitions
 - Toast notifications for user feedback
@@ -48,34 +52,50 @@ A fully functional, modern e-commerce platform built with React and Vite. This p
 ## 📦 Installation
 
 ### Prerequisites
+
 - Node.js (v16 or higher)
 - npm or yarn
 
 ### Setup Instructions
 
 1. **Clone the repository**
+
    ```bash
    git clone https://github.com/Ashutoshk18/E-Commerce-Website-Project.git
    cd E-Commerce-Website-Project
    ```
 
 2. **Navigate to the frontend directory**
+
    ```bash
    cd frontend
    ```
 
 3. **Install dependencies**
+
    ```bash
    npm install
    ```
 
 4. **Start the development server**
+
    ```bash
    npm run dev
    ```
 
 5. **Open your browser**
    Navigate to `http://localhost:5173` (or the port shown in terminal)
+
+### Backend Setup
+
+1. Go to backend folder
+2. Create `.env` using `.env.example`
+3. Fill environment variables
+4. Run:
+   ```bash
+   npm install
+   npm run dev
+   ```
 
 ### Build for Production
 
@@ -123,6 +143,7 @@ frontend/
 ## 🎯 Key Features in Detail
 
 ### Product Browsing
+
 - Browse products by category
 - View latest collections
 - See best sellers
@@ -130,6 +151,7 @@ frontend/
 - View related products
 
 ### Shopping Cart
+
 - Add items with size selection
 - Adjust quantities with +/- buttons
 - Remove items with confirmation
@@ -137,6 +159,7 @@ frontend/
 - Empty cart handling
 
 ### Order Placement
+
 - Delivery information form
 - Multiple payment methods:
   - Cash on Delivery
@@ -155,17 +178,21 @@ frontend/
 ## 🎨 Features Showcase
 
 ### Responsive Design
+
 The application is fully responsive and adapts to different screen sizes:
+
 - Mobile-first approach
 - Tablet and desktop optimizations
 - Touch-friendly interface
 
 ### State Management
+
 - Centralized state management using React Context
 - Cart state persistence during session
 - Real-time updates across components
 
 ### User Experience
+
 - Loading states
 - Error handling
 - Success notifications
