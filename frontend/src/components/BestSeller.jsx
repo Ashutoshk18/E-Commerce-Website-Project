@@ -8,7 +8,7 @@ const BestSeller = () => {
   const [bestSeller, setBestSeller] = useState([]);
   useEffect(() => {
     setBestSeller(products.filter((product) => product.bestseller).slice(0, 5));
-  }, []);
+  }, [products]);
   return (
     <div className="my-10">
       <div className="text-center text-3x1 py-8">
