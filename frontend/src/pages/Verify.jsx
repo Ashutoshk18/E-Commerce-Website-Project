@@ -1,13 +1,12 @@
 import React, { useContext, useEffect } from "react";
 import { ShopContext } from "../context/ShopContext";
 import { useSearchParams } from "react-router";
-import { backendUrl } from "../../../admin/src/App";
 import { toast } from "react-toastify";
 import axios from "axios";
 
 //This is a temporary verfication process, actual one uses web hooks but that's a long process.
 const Verify = () => {
-  const { navigate, token, setCartItems } = useContext(ShopContext);
+  const { navigate, token, setCartItems, backendUrl } = useContext(ShopContext);
   const [searchParams, setSearchParams] = useSearchParams();
 
   const success = searchParams.get("success");
