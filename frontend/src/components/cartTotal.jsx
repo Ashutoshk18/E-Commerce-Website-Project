@@ -1,24 +1,28 @@
-import React, { useContext, useState, useEffect } from 'react';
-import { ShopContext } from '../context/ShopContext';
-import { Link } from 'react-router';
+import React, { useContext, useState, useEffect } from "react";
+import { ShopContext } from "../context/ShopContext";
+import { Link } from "react-router";
+import Title from "./Title";
 
 const CartTotal = () => {
-  const { currency, delivery_fee, getCartTotal, cartItems } = useContext(ShopContext);
+  const { currency, delivery_fee, getCartAmount, cartItems } =
+    useContext(ShopContext);
   const [subtotal, setSubtotal] = useState(0);
   const [total, setTotal] = useState(0);
 
   useEffect(() => {
     const calculateTotal = async () => {
-      const cartTotal = await getCartTotal();
+      const cartTotal = await getCartAmount();
       setSubtotal(cartTotal);
       setTotal(cartTotal + delivery_fee);
     };
     calculateTotal();
-  }, [getCartTotal, delivery_fee, cartItems]);
+  }, [getCartAmount, delivery_fee, cartItems]);
 
   return (
-    <div className="border border-gray-300 rounded-lg p-6 bg-gray-50">
-      <h2 className="text-xl font-medium mb-4">Cart Totals</h2>
+    <div>
+      <div className="text-2xl">
+        <Title text1={"CART"} text2={"TOTALS"} />
+      </div>
       <div className="space-y-3 mb-4">
         <div className="flex justify-between">
           <p className="text-gray-600">Subtotal:</p>
@@ -43,12 +47,6 @@ const CartTotal = () => {
           </p>
         </div>
       </div>
-      <Link
-        to="/placeorder"
-        className="block w-full bg-black text-white text-center py-3 px-6 hover:bg-gray-800 transition-colors rounded"
-      >
-        PROCEED TO CHECKOUT
-      </Link>
     </div>
   );
 };

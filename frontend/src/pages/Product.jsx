@@ -5,7 +5,7 @@ import { assets } from "../assets/assets";
 import RelatedProducts from "../components/RelatedProducts";
 
 const Product = () => {
-  const { products, currency , addToCart} = useContext(ShopContext);
+  const { products, currency, addToCart } = useContext(ShopContext);
   const { productId } = useParams();
   // console.log(productId);
   const [size, setSize] = useState("");
@@ -36,7 +36,7 @@ const Product = () => {
               <img
                 src={item}
                 alt=""
-                className="w-[24%] sm:w-full sm:mb-3 flex-shrink-0 cursor-pointer"
+                className="w-[24%] sm:w-full sm:mb-3 shrink-0 cursor-pointer"
                 key={index}
                 onClick={() => setImage(item)}
               />
@@ -72,7 +72,7 @@ const Product = () => {
                   key={index}
                   className={`border-0 py-2 px-4 cursor-pointer
                     bg-gray-100 ${
-                      item === size ? "border-1 border-orange-500" : ""
+                      item === size ? "border-2 border-orange-500" : ""
                     }`}
                   onClick={() => setSize(item)}
                 >
@@ -81,7 +81,10 @@ const Product = () => {
               ))}
             </div>
           </div>
-          <button onClick={() => addToCart(productData._id, size)} className="bg-black cursor-pointer text-white px-8 py-3 text-sm active:bg-gray-700">
+          <button
+            onClick={() => addToCart(productData._id, size)}
+            className="bg-black cursor-pointer text-white px-8 py-3 text-sm active:bg-gray-700"
+          >
             ADD TO CART
           </button>
           <hr className="mt-8 sm:w-4/5" />
